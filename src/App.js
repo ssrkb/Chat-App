@@ -1,10 +1,16 @@
-//import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from "./container/Header";
+import Sidebar from "./container/Sidebar";
 
 function App() {
   return (
     <div className="App">
-      <h1> hi I'm am soham </h1>
+      <Header />
+      <div className='header_body'>
+        <Sidebar />
+        {/*react-Router --> chat Screen*/}
+      </div>
     </div>
   );
 }
