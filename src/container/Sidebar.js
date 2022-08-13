@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Sidebar.css";
 import { BsCircleFill } from "react-icons/bs";
 import { MdCreate } from "react-icons/md";
@@ -9,8 +9,24 @@ import {BsSave} from "react-icons/bs";
 import {BsFillPeopleFill} from "react-icons/bs";
 import {MdExpandLess} from "react-icons/md";
 import {FcExpand} from "react-icons/fc";
+import {GrAdd} from "react-icons/gr";
+
+//import db from "./firebase";
 
 function Sidebar() {
+  // const [channels, setChannels] = useState([]);
+  // useEffect(() => {
+  //   load the code Once when sidebar component loads
+  //   db.collection("rooms").onSnapshot((snapshot) => (
+  //     setChannels(
+  //       snapshot.docs.map((doc) => ({
+  //         id: doc.id,
+  //         name: doc.data().name,
+  //       }))    
+  //     )
+  //   ))
+  // },[]);
+
   return (
     <div className='Sidebar'>
         <div className='Sidebar_header'>
@@ -31,11 +47,11 @@ function Sidebar() {
         <hr/>
         <SidebarOption Icon={FcExpand} title="Show More"/>
         <hr/>
+        <SidebarOption Icon={GrAdd} title="add channel"/>
         {/*connect to DB and list all the items*/}
         {/*sidebarOption.......*/}
-
+        
     </div>
-
   )
 }
 
